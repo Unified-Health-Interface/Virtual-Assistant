@@ -12,8 +12,6 @@ class ActionGetUserDetails(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # dispatcher.utter_message(text="Hello, World!")
-
         details = requests.get("http://0.0.0.0:8000/user/hari").json()
 
         username = details['username']
