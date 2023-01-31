@@ -11,11 +11,13 @@ intents:
   - intent_get_user_details
   - intent_get_all_user_allergies
   - intent_check_if_user_has_given_allergy
+  - intent_get_all_user_appointments
 
 actions:
   - action_get_user_details
   - action_get_all_user_allergies
   - action_check_if_user_has_given_allergy
+  - action_get_all_user_appointments
 
 entities:
   - allergy
