@@ -12,13 +12,10 @@ class ActionGetUserDetails(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        details = requests.get("http://0.0.0.0:8000/user/hari").json()
+        details = requests.get(f"http://0.0.0.0:8000/user/{tracker.sender_id}").json()
 
-        username = details['username']
-        full_name = details['full_name']
-        user_id = details['id']
-
-        response = f"Your username is {username}.\nYour full name is {full_name}.\nYour user id is {user_id}."
+        response = f"Your username is {details['username']}.\nYour full name is {details['full_name']}.\nYour user id " \
+                   f"is {details['id']}."
 
         dispatcher.utter_message(text=response)
 

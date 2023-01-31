@@ -12,7 +12,7 @@ class ActionGetAllUserAppointments(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        appointments = requests.get("http://0.0.0.0:8000/appointment/hari").json()
+        appointments = requests.get(f"http://0.0.0.0:8000/appointment/{tracker.sender_id}").json()
 
         response = "Your appointments are:\n"
 
