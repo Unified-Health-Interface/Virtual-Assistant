@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_user_bills
+    examples: |
+      - tell me all my bills
+      - what are my pending bills?
+      - show my bills
+      - get my pending bills
