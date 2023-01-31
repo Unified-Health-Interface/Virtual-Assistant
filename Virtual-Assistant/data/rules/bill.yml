@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: Get user bills
+    steps:
+      - intent: intent_get_all_user_bills
+      - action: action_get_all_user_bills
