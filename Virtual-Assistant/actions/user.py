@@ -20,12 +20,7 @@ class ActionGetUserDetails(Action):
         full_name = details['full_name']
         user_id = details['id']
 
-        response = \
-            f"""
-Your username is {username}.
-Your full name is {full_name}.
-Your user id is {user_id}.
-"""
+        response = f"Your username is {username}.\nYour full name is {full_name}.\nYour user id is {user_id}."
 
         dispatcher.utter_message(text=response)
 
