@@ -1,7 +1,7 @@
 version: "3.1"
 
 rules:
-  - rule: Get user appointments
+  - rule: Get all user appointments
     steps:
       - intent: intent_get_all_user_appointments
       - action: action_get_all_user_appointments
