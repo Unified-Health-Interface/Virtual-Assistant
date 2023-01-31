@@ -133,3 +133,7 @@ poetry.lock
 
 # Idea
 .idea/
+
+# Rasa
+.rasa/
+models/
