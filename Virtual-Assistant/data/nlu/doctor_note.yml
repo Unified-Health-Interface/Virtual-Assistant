@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_user_doctor_notes
+    examples: |
+      - tell me all the notes of my doctors
+      - what are my doctors notes?
+      - show my notes of doctors
+      - get my doctors notes
