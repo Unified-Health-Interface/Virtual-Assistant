@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: Get user details
+    steps:
+      - intent: intent_get_user_details
+      - action: action_get_user_details
