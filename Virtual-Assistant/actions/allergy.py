@@ -35,8 +35,6 @@ class ActionCheckIfUserHasGivenAllergy(Action):
 
         allergy = next(tracker.get_latest_entity_values("allergy"), None)
 
-        print([i for i in tracker.get_latest_entity_values("allergy")])
-
         if allergy in [i['allergy'] for i in allergies]:
             response = f"Yes, you are allergic to {allergy}. Take care!"
 
