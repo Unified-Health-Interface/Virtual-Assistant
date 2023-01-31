@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_user_prescriptions
+    examples: |
+      - tell me all my prescriptions
+      - what are my prescription medicines?
+      - show my prescriptions
+      - get my medicines from prescription
