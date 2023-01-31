@@ -13,6 +13,7 @@ intents:
   - intent_check_if_user_has_given_allergy
   - intent_get_all_user_appointments
   - intent_get_user_basic_health_details
+  - intent_get_all_user_bills
 
 actions:
   - action_get_user_details
@@ -20,6 +21,7 @@ actions:
   - action_check_if_user_has_given_allergy
   - action_get_all_user_appointments
   - action_get_user_basic_health_details
+  - action_get_all_user_bills
 
 entities:
   - allergy
