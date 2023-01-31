@@ -14,6 +14,7 @@ intents:
   - intent_get_all_user_appointments
   - intent_get_user_basic_health_details
   - intent_get_all_user_bills
+  - intent_get_all_user_doctor_notes
 
 actions:
   - action_get_user_details
@@ -22,6 +23,7 @@ actions:
   - action_get_all_user_appointments
   - action_get_user_basic_health_details
   - action_get_all_user_bills
+  - action_get_all_user_doctor_notes
 
 entities:
   - allergy
