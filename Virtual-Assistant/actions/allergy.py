@@ -12,7 +12,7 @@ class ActionGetAllUserAllergies(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        allergies = requests.get("http://0.0.0.0:8000/allergy/hari").json()
+        allergies = requests.get(f"http://0.0.0.0:8000/allergy/{tracker.sender_id}").json()
 
         response = "You are allergic to:\n"
 
@@ -31,7 +31,7 @@ class ActionCheckIfUserHasGivenAllergy(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        allergies = requests.get("http://0.0.0.0:8000/allergy/hari").json()
+        allergies = requests.get(f"http://0.0.0.0:8000/allergy/{tracker.sender_id}").json()
 
         allergy = next(tracker.get_latest_entity_values("allergy"), None)
 
