@@ -7,3 +7,21 @@ nlu:
       - please give me all my allergies
       - can you show all my allergies?
       - find out all my allergies
+
+  - intent: intent_check_if_user_has_given_allergy
+    examples: |
+      - am i allergic to [peanuts](allergy)?
+      - can you check if i am allergic to [pollen](allergy)
+      - tell me if i am allergic to [milk](allergy)
+      - do i have a [sesame](allergy) allergy?
+
+  - lookup: allergy
+    examples: |
+      - peanuts
+      - nuts
+      - milk
+      - grapes
+      - pollen
+      - sesame
+      - fish
+      - wheat
