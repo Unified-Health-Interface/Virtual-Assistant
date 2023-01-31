@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+- intent: intent_get_user_details
+  examples: |
+    - show me my user details
+    - tell me my user details
+    - what are my user details?
+    - can you show my details?
