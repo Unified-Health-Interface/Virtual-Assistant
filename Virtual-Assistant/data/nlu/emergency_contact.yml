@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_user_emergency_contacts
+    examples: |
+      - tell me all my emergency contacts
+      - who are my emergency contacts?
+      - show my contacts in case of emergency
+      - get my emergency contacts
