@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_user_basic_health_details
+    examples: |
+      - tell me my health details
+      - what are my basic health details?
+      - show my health information
+      - get my basic health information
