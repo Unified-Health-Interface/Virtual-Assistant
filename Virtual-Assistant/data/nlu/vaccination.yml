@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_user_vaccinations
+    examples: |
+      - tell me all my vaccinations
+      - when is my next vaccination scheduled?
+      - show my vaccinations
+      - tell me the schedule of my vaccinations
