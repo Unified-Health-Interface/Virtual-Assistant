@@ -9,9 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - intent_get_user_details
+  - intent_get_all_user_allergies
 
 actions:
   - action_get_user_details
+  - action_get_all_user_allergies
 
 responses:
   utter_greet:
