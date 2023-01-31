@@ -7,7 +7,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 class ActionGetAllUserVaccinations(Action):
     def name(self) -> Text:
-        return "create_get_all_user_vaccinations"
+        return "action_get_all_user_vaccinations"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

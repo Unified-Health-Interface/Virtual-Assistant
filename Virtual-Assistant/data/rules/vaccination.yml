@@ -4,4 +4,4 @@ rules:
   - rule: Get all user vaccinations
     steps:
       - intent: intent_get_all_user_vaccinations
-      - action: create_get_all_user_vaccinations
+      - action: action_get_all_user_vaccinations
