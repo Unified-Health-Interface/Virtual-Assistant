@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+- intent: intent_get_all_user_allergies
+  examples: |
+    - tell me all my allergies
+    - please give me all my allergies
+    - can you show all my allergies?
+    - find out all my allergies
