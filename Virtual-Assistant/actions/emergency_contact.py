@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from notify_run import Notify
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from twilio.rest import Client
 
 load_dotenv()
 
@@ -43,6 +44,19 @@ def send_emails(emails, body):
             message.attach(MIMEText(body, "plain"))
 
             server.sendmail(sender_email, receiver_email, message.as_string())
+
+
+def send_calls(phones, message):
+    phone_number = os.getenv('PHONE_NUMBER')
+    account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+    auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+    client = Client(account_sid, auth_token)
+
+    for phone in phones:
+        call = client.calls.create(twiml=f'<Response><Say>{message}</Say></Response>',
+                                   to=phone, from_=phone_number)
+
+        print(call.sid)
 
 
 class ActionGetAllUserEmergencyContacts(Action):
@@ -86,5 +100,6 @@ class ActionCallAllUserEmergencyContacts(Action):
 
         send_notify_notification(endpoint, message)
         send_emails(email_addresses, message)
+        send_calls(phone_numbers, message)
 
         return []
