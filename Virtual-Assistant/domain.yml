@@ -18,6 +18,7 @@ intents:
   - intent_get_all_user_emergency_contacts
   - intent_get_all_user_prescriptions
   - intent_get_all_user_vaccinations
+  - intent_call_all_user_emergency_contacts
 
 actions:
   - action_get_user_details
@@ -30,6 +31,7 @@ actions:
   - action_get_all_user_emergency_contacts
   - action_get_all_user_prescriptions
   - action_get_all_user_vaccinations
+  - action_call_all_user_emergency_contacts
 
 entities:
   - allergy
