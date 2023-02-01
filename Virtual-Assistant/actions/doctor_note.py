@@ -1,4 +1,3 @@
-
 from typing import Any, Text, Dict, List
 
 import requests
