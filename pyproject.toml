@@ -9,6 +9,7 @@ packages = [{include = "virtual_assistant"}]
 [tool.poetry.dependencies]
 python = ">=3.7,<3.11"
 rasa = "^3.4.2"
+notify-run = "^0.0.15"
 
 
 [build-system]
