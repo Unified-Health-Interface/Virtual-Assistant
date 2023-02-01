@@ -7,3 +7,10 @@ nlu:
       - who are my emergency contacts?
       - show my contacts in case of emergency
       - get my emergency contacts
+
+  - intent: intent_call_all_user_emergency_contacts
+    examples: |
+      - call my emergency contacts
+      - help i am in danger
+      - help me call someone
+      - call my emergency contacts immediately
