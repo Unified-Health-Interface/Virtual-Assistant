@@ -96,7 +96,7 @@ class ActionCallAllUserEmergencyContacts(Action):
         email_addresses = [contact['email'] for contact in contacts]
         phone_numbers = [contact['phone'] for contact in contacts]
 
-        message = f"{full_name} is in danger! {full_name} needs help!"
+        message = f"{full_name} has rung the alarm! They are in danger! They need help! Please look into it immediately!"
 
         send_notify_notification(endpoint, message)
         send_emails(email_addresses, message)
