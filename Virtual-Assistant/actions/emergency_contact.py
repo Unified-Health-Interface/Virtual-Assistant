@@ -14,10 +14,10 @@ class ActionGetAllUserEmergencyContacts(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         contacts = requests.get(f"http://0.0.0.0:8000/emergency-contact/{tracker.sender_id}").json()
 
-        response = "Your emergency contacts are:\n"
+        response = ""
 
         for contact in contacts:
-            response += f"{contact['id']} - {contact['name']} has email {contact['email']} and phone number {contact['phone']}.\n"
+            response += f"Emergency contact {contact['name']} has email {contact['email']} and phone number {contact['phone']}.\n"
 
         dispatcher.utter_message(text=response)
 

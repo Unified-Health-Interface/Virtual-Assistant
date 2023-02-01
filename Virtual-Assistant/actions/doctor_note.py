@@ -15,10 +15,10 @@ class ActionGetAllUserDoctorNotes(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         notes = requests.get(f"http://0.0.0.0:8000/doctor-note/{tracker.sender_id}").json()
 
-        response = "Your doctors notes are:\n"
+        response = ""
 
         for note in notes:
-            response += f"{note['id']} - {note['doctor']} says {note['note']}.\n"
+            response += f"{note['doctor']} says {note['note']}.\n"
 
         dispatcher.utter_message(text=response)
 

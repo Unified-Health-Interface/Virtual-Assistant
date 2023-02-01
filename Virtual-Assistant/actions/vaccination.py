@@ -14,10 +14,10 @@ class ActionGetAllUserVaccinations(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         vaccinations = requests.get(f"http://0.0.0.0:8000/vaccination/{tracker.sender_id}").json()
 
-        response = "Your vaccination schedules are:\n"
+        response = ""
 
         for vaccination in vaccinations:
-            response += f"{vaccination['id']} - {vaccination['vaccine']} scheduled at on {vaccination['date_time'].split('T')[0]} at {vaccination['date_time'].split('T')[1]}.\n"
+            response += f"{vaccination['vaccine']} scheduled on {vaccination['date_time'].split('T')[0]} at {vaccination['date_time'].split('T')[1]}.\n"
 
         dispatcher.utter_message(text=response)
 

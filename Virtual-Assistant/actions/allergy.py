@@ -17,7 +17,7 @@ class ActionGetAllUserAllergies(Action):
         response = "You are allergic to:\n"
 
         for allergy in allergies:
-            response += f"{allergy['id']} - {allergy['allergy']}\n"
+            response += f"{allergy['allergy']}, "
 
         dispatcher.utter_message(text=response)
 

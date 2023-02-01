@@ -14,10 +14,10 @@ class ActionGetAllUserAppointments(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         appointments = requests.get(f"http://0.0.0.0:8000/appointment/{tracker.sender_id}").json()
 
-        response = "Your appointments are:\n"
+        response = ""
 
         for appointment in appointments:
-            response += f"{appointment['id']} - You have an appointment with {appointment['doctor']} in {appointment['hospital']} on {appointment['date_time'].split('T')[0]} at {appointment['date_time'].split('T')[1]}.\n"
+            response += f"You have an appointment with {appointment['doctor']} in {appointment['hospital']} on {appointment['date_time'].split('T')[0]} at {appointment['date_time'].split('T')[1]}.\n"
 
         dispatcher.utter_message(text=response)
 
