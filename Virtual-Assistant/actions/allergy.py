@@ -14,7 +14,7 @@ class ActionGetAllUserAllergies(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         allergies = requests.get(f"http://0.0.0.0:8000/allergy/{tracker.sender_id}").json()
 
-        response = "You are allergic to:\n"
+        response = "You are allergic to "
 
         for allergy in allergies:
             response += f"{allergy['allergy']}, "
