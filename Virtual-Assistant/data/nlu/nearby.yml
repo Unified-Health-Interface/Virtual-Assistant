@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_nearby_amenities
+    examples: |
+      - show all the [clinics](amenity) nearby
+      - where are the nearby [medical stores](amenity)?
+      - can you find out nearby [pharmacies](amenity)
+      - nearest [hospital](amenity)?
+
+  - lookup: amenity
+    examples: |
+      - clinic
+      - clinics
+      - medical store
+      - medical stores
+      - pharmacy
+      - pharmacies
+      - hospital
+      - hospitals
