@@ -1,7 +1,6 @@
 import os
 from typing import Any, Text, Dict, List
 
-import requests
 from dotenv import load_dotenv
 from newsapi import NewsApiClient
 from rasa_sdk import Action, Tracker
@@ -19,7 +18,9 @@ class ActionGetAllHealthNews(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         newsapi = NewsApiClient(api_key=os.getenv('NEWSAPI_API'))
 
-        response = "\n".join([i['title'] for i in newsapi.get_top_headlines(category='health', language='en', country='in')['articles']][:3])
+        response = "\n".join(
+            [i['title'] for i in newsapi.get_top_headlines(category='health', language='en', country='in')['articles']][
+            :3])
 
         dispatcher.utter_message(text=response)
 
