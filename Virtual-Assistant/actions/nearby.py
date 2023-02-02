@@ -12,13 +12,6 @@ class ActionGetAllNearbyAmenities(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # allergies = requests.get(f"http://0.0.0.0:8000/allergy/{tracker.sender_id}").json()
-
-        # response = "You are allergic to "
-        #
-        # for allergy in allergies:
-        #     response += f"{allergy['allergy']}, "
-
         response = ""
 
         amenity = next(tracker.get_latest_entity_values("amenity"), None)
