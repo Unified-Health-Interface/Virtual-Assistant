@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: intent_get_all_health_news
+    examples: |
+      - show all health news
+      - get me news about healthcare
+      - tell me latest healthcare news
+      - give me health news
