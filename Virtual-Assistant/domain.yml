@@ -20,6 +20,7 @@ intents:
   - intent_get_all_user_vaccinations
   - intent_call_all_user_emergency_contacts
   - intent_get_all_nearby_amenities
+  - intent_get_all_health_news
 
 actions:
   - action_get_user_details
@@ -34,6 +35,7 @@ actions:
   - action_get_all_user_vaccinations
   - action_call_all_user_emergency_contacts
   - action_get_all_nearby_amenities
+  - action_get_all_health_news
 
 entities:
   - allergy
