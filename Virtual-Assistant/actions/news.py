@@ -18,7 +18,7 @@ class ActionGetAllHealthNews(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         newsapi = NewsApiClient(api_key=os.getenv('NEWSAPI_API'))
 
-        response = "\n".join(
+        response = ".\n".join(
             [i['title'] for i in newsapi.get_top_headlines(category='health', language='en', country='in')['articles']][
             :3])
 
