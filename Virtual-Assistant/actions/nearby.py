@@ -12,16 +12,13 @@ class ActionGetAllNearbyAmenities(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        response = ""
-
         amenity = next(tracker.get_latest_entity_values("amenity"), None)
 
         request = requests.get("https://nominatim.openstreetmap.org/search",
                                params={"q": f"{amenity} near the international school bangalore",
-                                       "format": "json"}).json()[0:3]
+                                       "format": "json"}).json()[0]
 
-        for i in request:
-            response += f"{i['display_name']}\n"
+        response = f"The nearest {amenity} to you is {request['display_name']}\n"
 
         dispatcher.utter_message(text=response)
 
